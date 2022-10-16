@@ -1,0 +1,35 @@
+@import "../../../variables";
+
+.header {
+    display: grid;
+    grid-template-columns: 3rem;
+    place-items: center;
+    margin: 2rem;
+
+}
+
+.nav {
+    ul {
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        background-color: $b-d-a-c;
+
+        & li {
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+
+            &:hover svg path,
+            &:hover svg g {
+                fill: $s-c;
+                fill-opacity: 1;
+                opacity: 1;
+            }
+        }
+
+    }
+
+    &__pry,
+    &__sec {
+        margin: 2rem 0;
+    }
+}
