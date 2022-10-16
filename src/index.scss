@@ -4,6 +4,8 @@
 *,
 *::before,
 *::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -75,16 +77,12 @@ select {
     }
 }
 
-svg {
-    transition: all 200ms linear;
-}
-
-svg:hover path {
-    fill: $i-c;
+li {
+    list-style: none;
 }
 
 body {
-    background-color: $b-c;
+    background-color: $b-d-c;
     width: 100%;
     min-height: 100vh;
 }
