@@ -1,0 +1,9 @@
+@import "../../variables";
+
+.chart {
+    margin: 0.5rem 0;
+
+    &__title {
+        @include font(700, 1.5rem, $l)
+    }
+}

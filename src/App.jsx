@@ -1,16 +1,17 @@
 import React, { Fragment } from "react";
 import styles from "./App.module.scss";
 import Header from "./components/UI/Header/Header";
-import x from "./assets/images/Vector.svg";
 import AppNav from "./components/UI/Nav/AppNav";
-import AvatarList from "./components/UI/Avatars/AvatarList";
 import Recents from "./components/Sections/Recents";
+import TopChartMusicItem from "./components/Songs/TopChartMusicItem";
+import TopChart from "./components/Sections/TopChart";
 const App = () => {
   return (
     <Fragment>
       <Header />
       <AppNav />
       <Recents />
+      <TopChart />
       {/* <img src={x} alt="" /> */}
     </Fragment>
   );

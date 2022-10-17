@@ -1,6 +1,14 @@
+@import "../../../variables";
+
 .icon {
+    cursor: pointer;
+
     &.recent path {
-        fill: #fff;
+        fill: $l;
     }
 
+    &.chart path {
+        fill: transparent;
+        stroke: $s-c;
+    }
 }
