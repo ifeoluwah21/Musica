@@ -1,0 +1,54 @@
+@import "../../variables";
+
+.music {
+    width: 21rem;
+    display: grid;
+    grid-template-rows: 1rem 1.5rem 1rem 1.5rem 1rem;
+    grid-template-columns: 1rem 4rem auto 2.1325rem 1rem;
+    border-radius: 2rem;
+    background-color: $b-d-a-c;
+    margin: 1rem 0;
+    cursor: pointer;
+
+    &__cover {
+        width: 4rem;
+        grid-column: 2/3;
+        grid-row: 2/5;
+    }
+
+    &__title {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        padding-left: 1rem;
+        @include font(400, 1rem, $l)
+    }
+
+    &__author {
+        grid-column: 3/4;
+        grid-row: 3/4;
+        place-self: center start;
+        padding-left: 1rem;
+        @include font(400, 0.7rem, $f-c-g-o)
+    }
+
+    &__duration {
+        grid-column: 3/4;
+        grid-row: 4/5;
+        place-self: center start;
+        padding-left: 1rem;
+        @include font(400, 0.85rem, $l)
+    }
+
+    &__interaction {
+        grid-column: 4/5;
+        grid-row: 2/5;
+        place-self: center;
+        width: 2.1325rem;
+        height: 2.1325rem;
+        border: 1px solid $s-c;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
