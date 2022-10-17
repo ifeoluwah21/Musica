@@ -1,0 +1,7 @@
+@import "../../variables";
+
+.newrelease {
+    &__title {
+        @include font(700, 1.5rem, $l)
+    }
+}

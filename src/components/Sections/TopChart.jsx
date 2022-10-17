@@ -32,9 +32,7 @@ const albums = [
 ];
 
 const TopChart = () => {
-    console.log(albums);
     const chart = albums.map(album => {
-        console.log(album);
         return (
             <TopChartMusicItem cover={album.cover} key={album.id} title={album.title} author={album.author} duration={album.duration} />
         );

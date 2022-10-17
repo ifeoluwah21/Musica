@@ -6,6 +6,8 @@
     &__control {
         position: relative;
         width: 50%;
+        min-width: 15rem;
+        max-width: 20rem;
     }
 }
 

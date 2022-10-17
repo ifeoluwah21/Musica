@@ -1,0 +1,7 @@
+@import "../../variables";
+
+.area {
+    &__title {
+        @include font(700, 1.5rem, $l)
+    }
+}
