@@ -1,0 +1,56 @@
+@import "../../variables";
+
+.recents {
+    width: 42.875rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $p-c;
+    background-image: url("../../assets//images/Vector.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 2.5rem;
+
+    & img {
+        order: 1;
+    }
+
+    &__details {
+        display: grid;
+        grid-template-columns: 2rem auto;
+        grid-template-rows: 2rem 2rem auto 3rem 5rem auto 2rem 2rem;
+    }
+
+    &__type {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        @include font(400, 1rem, $l);
+    }
+
+    &__title {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        @include font(700, 2.1875rem, $l);
+        line-height: 40px;
+    }
+
+    &__info {
+        grid-column: 2/3;
+        grid-row: 5/6;
+        @include font(400, 1rem, $l);
+        width: 20.2rem;
+    }
+
+    &__interaction {
+        grid-column: 2/3;
+        grid-row: 7/8;
+        display: grid;
+        grid-template-columns: 5rem 1rem auto;
+        place-items: center start;
+
+        &>span {
+            grid-column: 3/4;
+            @include font(400, 1rem, $l);
+        }
+    }
+}
