@@ -1,0 +1,14 @@
+.list {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 0 0 9.5625rem !important;
+    column-gap: 1.875rem;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin: 1rem 0;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

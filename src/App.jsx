@@ -3,8 +3,9 @@ import styles from "./App.module.scss";
 import Header from "./components/UI/Header/Header";
 import AppNav from "./components/UI/Nav/AppNav";
 import Recents from "./components/Sections/Recents";
-import TopChartMusicItem from "./components/Songs/TopChartMusicItem";
 import TopChart from "./components/Sections/TopChart";
+import NewRelease from "./components/Sections/NewRelease";
+import AreaQuery from "./components/Sections/AreaQuery";
 const App = () => {
   return (
     <Fragment>
@@ -12,6 +13,8 @@ const App = () => {
       <AppNav />
       <Recents />
       <TopChart />
+      <NewRelease />
+      <AreaQuery />
       {/* <img src={x} alt="" /> */}
     </Fragment>
   );
