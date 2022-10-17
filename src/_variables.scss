@@ -1,15 +1,16 @@
 $s-c : #FACD66;
 $b-d-c: #1E1E1E;
 $b-d-a-c: #1A1E1F;
+$f-c-g-o: rgba(255, 255, 255, 0.25);
 $l: #EFEEE0;
 $p-c: #A4C7C6;
 $p-a-l: #A4C7C6;
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
 
-@mixin font($f-w, $f-s) {
+@mixin font($f-w, $f-s, $f-c ) {
     font-family: 'Quicksand', sans-serif;
-    color: $l;
+    color: $f-c;
     font-size: $f-s;
     font-weight: $f-w;
 }
