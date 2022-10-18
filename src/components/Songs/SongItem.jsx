@@ -2,7 +2,6 @@ import React from 'react';
 import styles from "./SongItem.module.scss";
 
 const SongItem = (props) => {
-    console.log(props);
     return (
         <li className={`${styles.song} ${props.className || ``}`}>
             <figure className={styles[`song__card`]}>
