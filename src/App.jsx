@@ -6,6 +6,7 @@ import Recents from "./components/Sections/Recents";
 import TopChart from "./components/Sections/TopChart";
 import NewRelease from "./components/Sections/NewRelease";
 import AreaQuery from "./components/Sections/AreaQuery";
+import Footer from "./components/UI/Footer/Footer";
 const App = () => {
   return (
     <Fragment>
@@ -15,6 +16,7 @@ const App = () => {
       <TopChart />
       <NewRelease />
       <AreaQuery />
+      <Footer />
       {/* <img src={x} alt="" /> */}
     </Fragment>
   );
