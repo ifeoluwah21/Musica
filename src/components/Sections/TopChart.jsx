@@ -1,48 +1,54 @@
 import React from 'react';
 import TopChartMusicItem from '../Songs/TopChartMusicItem';
 
-import cover1 from "../../assets/images/cover-1.png";
-import cover2 from "../../assets/images/cover-2.png";
-import cover3 from "../../assets/images/cover-3.png";
-
 import styles from "./TopChart.module.scss";
+import { useLoaderData } from 'react-router-dom';
 
-const albums = [
-    {
-        title: `Golden age of 80s`,
-        author: `Sean swadder`,
-        duration: `2:34:45`,
-        id: `a1`,
-        cover: cover1
-    },
-    {
-        title: `Reggae “n” blues`,
-        author: `Dj YK mule`,
-        duration: `1:02:42`,
-        id: `a2`,
-        cover: cover2
-    },
-    {
-        title: `Tomorrow’s tunes`,
-        author: `Obi Datti`,
-        duration: `2:01:25`,
-        id: `a3`,
-        cover: cover3
-    }
-];
 
-const TopChart = () => {
-    const chart = albums.map(album => {
+
+const TopChart = (props) => {
+    const data = useLoaderData();
+    const slicedData = data?.slice(0, 3);
+    const chart = slicedData.map(data => {
         return (
-            <TopChartMusicItem cover={album.cover} key={album.id} title={album.title} author={album.author} duration={album.duration} />
+            <TopChartMusicItem thumbnail={data.thumbnail} key={data.id} title={data.title} artist={data.artist} duration={data.duration} />
         );
     });
     return (
-        <section className={styles.chart}>
+        <section className={`${styles.chart} ${props.className}`}>
             <h2 className={styles[`chart__title`]}>Top charts</h2>
             {chart}
         </section>
     );
 };
 
+export async function loader(data) {
+    console.log(data);
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'd47e98a635msh9b07030890a380cp12d93djsn7491e064d50e',
+            'X-RapidAPI-Host': 'youtube-music1.p.rapidapi.com'
+        }
+    };
+
+    const res = await fetch('https://youtube-music1.p.rapidapi.com/v2/search?query=burna%20boy', options)
+        .then(response => response.json())
+        .then(response => response)
+        .catch(err => console.error(err));
+    console.log("res", res);
+    const transformedData = res?.result?.songs?.map(data => {
+        let minutes = Math.floor(data.duration / 60);
+        let seconds = data.duration % 60;
+        return {
+            title: data.title,
+            artist: data.artists[0].name,
+            artistId: data.artists[0].artist_id,
+            duration: `${minutes}:${seconds > 9 ? seconds : `0${seconds}`}`,
+            id: data.id,
+            thumbnail: data.thumbnail
+        };
+    });
+    return transformedData;
+}
 export default TopChart;

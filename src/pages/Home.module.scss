@@ -1,0 +1,29 @@
+@import "../variables";
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    &__recents,
+    &__topchart,
+    &__newrelease,
+    &__areaquery {
+        grid-column: 1/3;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .wrapper {
+        &__recents {
+            grid-column: 1/2;
+        }
+
+        &__topchart {
+            grid-column: 2/3;
+            justify-self: center;
+        }
+    }
+
+}

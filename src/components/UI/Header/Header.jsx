@@ -5,10 +5,10 @@ import Input from "../../Form/Input";
 import LogoIcon from "../Icons/LogoIcon";
 
 
-const Header = () => {
+const Header = (props) => {
 
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${props.className}`}>
             <LogoIcon className={`${styles["header__logo"]}`} />
             <Input className={`${styles[`header__input`]}`} />
         </header>
