@@ -1,9 +1,12 @@
 @import "../../variables";
 
 .recents {
-    width: 42.875rem;
+    width: 100%;
+    max-width: 40rem;
+    aspect-ratio: 2/1;
+    margin: 2rem 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 50%);
     background-color: $p-c;
     background-image: url("../../assets//images/Vector.svg");
     background-position: top right;
@@ -13,6 +16,7 @@
 
     & img {
         order: 1;
+        align-self: end;
     }
 
     &__details {

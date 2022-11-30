@@ -8,9 +8,9 @@ import ProfileIcon from "../Icons/ProfileIcon";
 
 import styles from "./AppNav.module.scss";
 
-const AppNav = () => {
+const AppNav = (props) => {
     return (
-        <nav className={`${styles.nav}`}>
+        <nav className={`${styles.nav} ${props.className}`}>
             <ul className={`${styles["nav__pry"]}`}>
                 <li><HomeIcon /></li>
                 <li><PlaylistIcon /></li>

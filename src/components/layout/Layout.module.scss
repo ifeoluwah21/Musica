@@ -1,0 +1,11 @@
+.main {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 4rem auto;
+    overflow-x: hidden;
+    margin-bottom: 2.5rem;
+
+    &__section {
+        grid-column: 2/3;
+    }
+}

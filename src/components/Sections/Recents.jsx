@@ -6,9 +6,9 @@ import hero from "../../assets/images/hero.png";
 import AvatarList from "../UI/Avatars/AvatarList";
 import LikeIcon from "../UI/Icons/LikeIcon";
 
-const Recents = () => {
+const Recents = (props) => {
     return (
-        <section className={styles.recents}>
+        <section className={`${styles.recents} ${props.className}`}>
             <img src={hero} alt="Lead image" />
             <article className={styles[`recents__details`]}>
                 <p className={styles[`recents__type`]}>{`Currated Playlist`}</p>
